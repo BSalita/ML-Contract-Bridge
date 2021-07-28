@@ -11,7 +11,7 @@ By Robert Salita
 The ML-Contract-Bridge Project is an experiment in collecting data, statistical analysis and applying AI techniques to the game of duplicate contract bridge.
 This document explains the mission and status of the project. The project is in the proof-of-concept stage and research is on-going.
 The significance of this project is that it uses AI to make predictions about contracts, results and scores.
-The project is currently written in Python and uses sklearn for AI modeling. ACBL and/or The Common Game data is used.
+The project is currently written in Python and uses sklearn for AI modeling. ACBL, Bridge Power Ratings and/or The Common Game data is used.
 
 ## Introdction
 Initial experiments constrain the AI to neither having any understanding of the play of the hand nor any clues provided by bidding. This is
@@ -22,8 +22,7 @@ The initial experiments ask the AI to:
 1. Predict the maximum number of tricks which can be taken in the NS and EW directions for each suit. Accuracy is calculated by comparing
     the AI’s predictions to double dummy results.
 2. Predict par score and calculate accuracy by comparing predicted to actual par score.
-3. Using the above predictions, calculate the AI’s game percentage and ranking. Matchpoint information is obtained from club data from ACBL and/or The Common
-    Game’s (TCG).
+3. Using the above predictions, calculate the AI’s game percentage and ranking.
 
 An important aspect of ML-Bridge is the creation of charts. The charts prove helpful in understanding the accuracy of predictions. Mistakes in
 predictions often become visible through examination of charts. The charts contain a wealth of valuable information for bridge enthusiasts,
