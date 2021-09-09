@@ -23,6 +23,7 @@ from IPython.display import display  # needed for VSCode
 # declare module read-only variables
 CDHS = 'CDHS' # string ordered by suit rank - low to high
 CDHSN = CDHS+'N' # string ordered by strain
+NSHDC = 'NSHDC' # order by highest score value. useful for idxmax(). coincidentally reverse of CDHSN.
 SHDC = 'SHDC' # string ordered by suit rank - high to low
 NSEW = 'NSEW' # string ordered by partnership direction
 NESW = 'NESW' # string ordered by order of bidding/playing direction
