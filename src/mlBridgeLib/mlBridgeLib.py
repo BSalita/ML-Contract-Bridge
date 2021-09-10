@@ -430,6 +430,11 @@ def ScoreOverTricks(level, suit, double, declarer, vulnerability):
 
 
 def ScoreDicts():
+    # Returns 3 dicts useful for scoring. Each dict expects a tuple: (level, suit, vulnerability, double, declarer)
+    # Examples:
+    #   scoresd[(0,0,0,0,0)] return [-350, -300, -250, -200, -150, -100, -50, 70, 90, 110, 130, 150, 170, 190]
+    #   makeScoresd[(0,0,0,0,0)] return [0, 0, 0, 0, 0, 0, 0, 70, 20, 20, 20, 20, 20, 20]
+    #   setScoresd[(0,0,0,0,0)] return [-50, -50, -50, -50, -50, -50, -50, 0, 0, 0, 0, 0, 0, 0]    
     scoresd = {(level, suit, vulnerability, double, declarer): [score(level, suit, double, declarer, vulnerability, result) for result in list(range(-7-level, 0))+list(
         range(0, 7-level))] for declarer in range(0, 4) for level in range(0, 7) for suit in range(0, 5) for double in range(0, 3) for vulnerability in range(0, 2)}
     assert sum([len(v) != 14 for v in scoresd.values()]) == 0
