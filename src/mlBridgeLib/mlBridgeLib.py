@@ -229,6 +229,10 @@ def DirectionSymToDealer(direction_symbol):
     return list(NESW).index(direction_symbol) # using NSEW index because of score()
 
 
+def StrainSymToValue(strain_symbol):
+    return list(CDHSN).index(strain_symbol) # using CDHSN index because of score()
+
+
 # Create list of tuples of (score, (level, strain), direction, result). Useful for calculating Pars.
 # todo: rewrite into two defs; looping, core logic
 def DDmakesToScores(ddmakes,vuls):
