@@ -28,7 +28,7 @@ AI models are currently trained using sklearn. In the future the project may mov
 6. Pimp some packages: pip install -U scikit-learn sqlalchemy sqlalchemy-utils
 7. -- OBSOLETE -- For training using tensorflow: conda install keras-gpu tensorflow-gpu
 8. If pd.read_pickle() shows errors: pip install --upgrade pandas
-9. Possibly optional packages: inspect itertools plotly seaborn xlsxwriter.utility jupyter_contrib_nbextensions
+9. Possibly optional packages: inspect itertools plotly plotly-express seaborn xlsxwriter.utility jupyter_contrib_nbextensions terminado
 10. Github projects: Required: https://github.com/dds-bridge/dds
 11. Github projects: Optional: https://github.com/Afwas/python-dds
 
