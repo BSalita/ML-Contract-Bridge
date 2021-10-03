@@ -31,7 +31,7 @@ AI models are currently trained using sklearn. In the future the project may mov
 9. Possibly optional packages: inspect itertools plotly plotly-express seaborn xlsxwriter.utility jupyter_contrib_nbextensions terminado pandas-profiling jupyter_nbextensions_configurator
 10. Github projects: Required: https://github.com/dds-bridge/dds
 11. Github projects: Optional: https://github.com/Afwas/python-dds
-12. Google colab: Optional: follow instructoins at: https://research.google.com/colaboratory/local-runtimes.html
+12. Google colab: Optional: follow instructions at: https://research.google.com/colaboratory/local-runtimes.html
 
 Tell Python where to find the lib directory named mlBridgeLib. Set PYTHONPATH environment variable e.g. PYTHONPATH=..\mlBridgeLib
 
