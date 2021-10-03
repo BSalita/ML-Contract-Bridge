@@ -46,6 +46,7 @@ CREATE TABLE "events" (
 "maxRoundNumber" INT NULL,
 "rounds" VARCHAR NULL,
 "program_name" VARCHAR NULL,
+-- reject a few NULL tb_count e.g. club-results/106880/details/339368.data.sql
 "tb_count" REAL NOT NULL,
 "hasOverallStrats" BOOL NULL,
 "hasSectionStrats" BOOL NULL,
@@ -56,8 +57,8 @@ CREATE TABLE "events" (
 "movieExists" BOOL NULL,
 -- accept the many NULL maxBoardsCount instances. deprecated?
 "maxBoardsCount" INT NULL,
--- reject 3000 NULL bboGameLinks.
-"bboGameLinks" VARCHAR NOT NULL,
+-- reject 3000 NULL bboGameLinks?
+"bboGameLinks" VARCHAR NULL,
 "authCheck" BOOL NOT NULL,
 "employee" BOOL NULL,
 "mpc_test" BOOL NULL,
@@ -113,8 +114,8 @@ CREATE TABLE "awards" (
 "updated_at" VARCHAR NULL,
 "player_id" INT NOT NULL,
 "comp_group_id" INT NOT NULL,
--- reject 47,000 non-INT id_number e.g. NM, NA, HARR, HI, tmp:...
-"id_number" INT NOT NULL,
+-- reject 47,000 non-INT id_number e.g. NM, NA, HARR, HI, tmp:...?
+"id_number" INT NULL,
 "type" VARCHAR NOT NULL,
 "final" INT NOT NULL,
 "rank" VARCHAR NOT NULL,
@@ -194,7 +195,8 @@ CREATE TABLE "board_results_addons" (
 "created_at" VARCHAR NOT NULL,
 "updated_at" VARCHAR NOT NULL,
 "board_results_id" INT NOT NULL UNIQUE,
-"bbo_movie" VARCHAR NOT NULL
+-- reject NULL bbo_movie?
+"bbo_movie" VARCHAR NULL
 );
 
 DROP TABLE IF EXISTS "board_results_add_ons";
@@ -204,7 +206,8 @@ CREATE TABLE "board_results_add_ons" (
 "created_at" VARCHAR NOT NULL,
 "updated_at" VARCHAR NOT NULL,
 "board_results_id" INT NOT NULL UNIQUE,
-"bbo_movie" VARCHAR NOT NULL
+-- reject NULL bbo_movie?
+"bbo_movie" VARCHAR NULL
 );
 
 DROP TABLE IF EXISTS "boards";
@@ -344,7 +347,8 @@ CREATE TABLE "movieExists" (
 "created_at" VARCHAR NOT NULL,
 "updated_at" VARCHAR NOT NULL,
 "board_results_id" INT NOT NULL,
-"bbo_movie" VARCHAR NOT NULL
+-- reject NULL bbo_movie?
+"bbo_movie" VARCHAR NULL
 );
 
 DROP TABLE IF EXISTS "pair_summaries";
@@ -397,9 +401,9 @@ CREATE TABLE "players" (
 "created_at" VARCHAR NOT NULL,
 "updated_at" VARCHAR NULL,
 "pair_summary_id" INT NOT NULL,
--- reject non-INT id_number
+-- reject non-INT id_number?
 -- NULL case: club-results/130948/details/105902.data.sql
-"id_number" VARCHAR NOT NULL,
+"id_number" VARCHAR NULL,
 "rateable" BOOL NOT NULL,
 "name" VARCHAR NOT NULL,
 "city" VARCHAR NULL,
@@ -608,8 +612,8 @@ CREATE TABLE "team_players" (
 "created_at" VARCHAR NOT NULL,
 "updated_at" VARCHAR NULL,
 "team_summary_id" INT NOT NULL,
--- reject non-INT id_number
-"id_number" VARCHAR NOT NULL,
+-- reject 100+ non-INT id_number?
+"id_number" VARCHAR NULL,
 "rateable" BOOL NOT NULL,
 "name" VARCHAR NOT NULL,
 "city" VARCHAR NULL,
