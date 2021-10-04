@@ -28,12 +28,10 @@ AI models are currently trained using sklearn. In the future the project may mov
 6. Pimp some packages: pip install -U scikit-learn sqlalchemy sqlalchemy-utils
 7. -- OBSOLETE -- For training using tensorflow: conda install keras-gpu tensorflow-gpu
 8. If pd.read_pickle() shows errors: pip install --upgrade pandas
-9. Possibly optional packages: inspect itertools plotly plotly-express seaborn xlsxwriter.utility jupyter_contrib_nbextensions terminado pandas-profiling jupyter_nbextensions_configurator
+9. Possibly optional packages: inspect itertools plotly plotly-express seaborn xlsxwriter.utility jupyter_contrib_nbextensions terminado pandas-profiling jupyter_nbextensions_configurator jupyter-resource-usage
 10. Github projects: Required: https://github.com/dds-bridge/dds
 11. Github projects: Optional: https://github.com/Afwas/python-dds
 12. Google colab: Optional: follow instructions at: https://research.google.com/colaboratory/local-runtimes.html. colab is possible but problematic.
-
-Tell Python where to find the lib directory named mlBridgeLib. Set PYTHONPATH environment variable e.g. PYTHONPATH=..\mlBridgeLib
 
 ## Hardware Requirements
 Currently the project trains using sklearn which is CPU only. The more cores available for training, the better.
