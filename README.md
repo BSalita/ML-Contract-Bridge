@@ -33,8 +33,6 @@ AI models are currently trained using sklearn. In the future the project may mov
 11. Github projects: Optional: https://github.com/Afwas/python-dds
 12. Google colab: Optional: follow instructions at: https://research.google.com/colaboratory/local-runtimes.html. colab is possible but problematic.
 
-Tell Python where to find the lib directory named mlBridgeLib. Set PYTHONPATH environment variable e.g. PYTHONPATH=..\mlBridgeLib
-
 ## Hardware Requirements
 Currently the project trains using sklearn which is CPU only. The more cores available for training, the better.
 Development is currently using AMD 8/16 core desktops and notebooks. Training can take 4 to 15 minutes using GPU, 30 minutes to 12 hours using CPU.
