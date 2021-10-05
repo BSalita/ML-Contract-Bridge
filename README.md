@@ -32,6 +32,7 @@ AI models are currently trained using sklearn. In the future the project may mov
 10. Github projects: Required: https://github.com/dds-bridge/dds
 11. Github projects: Optional: https://github.com/Afwas/python-dds
 12. Google colab: Optional: follow instructions at: https://research.google.com/colaboratory/local-runtimes.html. colab is possible but problematic.
+Issues include instabilities, old python packages, pathing (imports, notebooks, storage), notebook and storage connection delays, memory size limits.
 
 ## Hardware Requirements
 Currently the project trains using sklearn which is CPU only. The more cores available for training, the better.
