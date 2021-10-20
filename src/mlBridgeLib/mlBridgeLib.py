@@ -41,6 +41,8 @@ vul_directions = [[],[0,2],[1,3],[0,1,2,3]]
 contract_types = ['Pass','Partial','Game','SSlam','GSlam']
 dealer_d = {'N':0, 'E':1, 'S':2, 'W':3}
 vul_d = {'None':0, 'Both':1, 'N_S':2, 'E_W':3} # dds vul encoding is weird
+allContracts = [(l+1,s) for l in range(0,7) for s in CDHSN]
+allHigherContracts_d = {c:allContracts[n+1:] for n,c in enumerate(allContracts)}
 
 def pd_options_display():
     # display options overrides
