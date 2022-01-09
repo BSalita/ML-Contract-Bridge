@@ -43,6 +43,7 @@ dealer_d = {'N':0, 'E':1, 'S':2, 'W':3}
 vul_d = {'None':0, 'Both':1, 'N_S':2, 'E_W':3} # dds vul encoding is weird
 allContracts = [(0,'Pass')]+[(l+1,s) for l in range(0,7) for s in CDHSN]
 allHigherContracts_d = {c:allContracts[n+1:] for n,c in enumerate(allContracts)}
+suit_names_d = {'S':'Spades','H':'Hearts','D':'Diamonds','C':'Clubs','N':'No-Trump'}
 
 def pd_options_display():
     # display options overrides
@@ -89,6 +90,16 @@ def CombinedSuitLengths(h):
 #    t = CombinedSuitLengths(h)
 #    return tuple((t[i],i,'SHDC'[i]) for (v, i) in sorted([(v, i) for (i, v) in enumerate(t)],reverse=True))
 
+
+# convert hand tuple into PBN
+def HandToPBN(hand):
+    return 'N:'+' '.join('.'.join([hh for hh in h]) for h in hand)
+# create list of PBNs from Hands (list of tuple of tuples)
+def HandsToPBN(hands):
+    pbns = []
+    for hand in hands:
+        pbns.append(HandToPBN(hand))
+    return pbns
 
 # Create tuple of suit lengths per partnership (NS, EW)
 #def CombinedSuitLengthTuples(t):
