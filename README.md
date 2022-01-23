@@ -25,7 +25,7 @@ AI models are currently trained using sklearn. In the future the project may mov
 3. Set the current environment to newly created: activate bridge
 4. For training using fastai: conda install -c pytorch -c nvidia -c fastai fastai
 5. Install jupyter et al: conda install -c conda-forge notebook pandas matplotlib bs4 lxml
-6. Pimp some packages: pip install -U scikit-learn sqlalchemy sqlalchemy-utils
+6. Pimp some packages: pip install -U scikit-learn sqlalchemy sqlalchemy-utils endplay
 7. -- OBSOLETE -- For training using tensorflow: conda install keras-gpu tensorflow-gpu
 8. If pd.read_pickle() shows errors: pip install --upgrade pandas
 9. Possibly optional packages: inspect itertools plotly plotly-express seaborn xlsxwriter.utility jupyter_contrib_nbextensions terminado pandas-profiling jupyter_nbextensions_configurator jupyter-resource-usage
